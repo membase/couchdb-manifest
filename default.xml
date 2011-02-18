@@ -7,9 +7,6 @@
 
   <remote  name="apache" fetch="git://git.apache.org/" />
   <remote  name="erlang" fetch="git://github.com/erlang/" />
-  <remote  name="savannah" fetch="git://git.sv.gnu.org/" />
-  <!-- Horrible autoconf hack.  Appropriate -->
-  <remote  name="savannahh" fetch="http://git.savannah.gnu.org/" />
 
   <default revision="master" remote="membase" />
 
@@ -40,9 +37,5 @@
            revision="r37a3" />
   <project path="dependencies/icu4c-4_4" name="icu4c"
            revision="r44" />
-  <project path="dependencies/autoconf-2.13" name="autoconf"
-           remote="savannah" revision="74b21b9b2ce75529e3d93df7367f4f4b0c6b6adf" />
-  <project path="dependencies/autoconf-2.59" name="r/autoconf"
-           remote="savannahh" revision="99a48ad6c1e3f446717e1f8fec2fb1ae76b09f2e" />
 
 </manifest>
