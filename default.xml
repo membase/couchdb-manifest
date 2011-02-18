@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="membase"
+           fetch="git://github.com/membase/"
+           review="review.membase.org" />
+
+  <remote  name="apache" fetch="git://git.apache.org/" />
+  <remote  name="erlang" fetch="git://github.com/erlang/" />
+  <remote  name="savannah" fetch="git://git.sv.gnu.org/" />
+  <!-- Horrible autoconf hack.  Appropriate -->
+  <remote  name="savannahh" fetch="http://git.savannah.gnu.org/" />
+
+  <default revision="master" remote="membase" />
+
+  <project path="build-tools" name="build-couchdb">
+	<copyfile src="README.md" dest="README.md" />
+	<copyfile src="Rakefile" dest="Rakefile" />
+	<copyfile src="TODO" dest="TODO" />
+	<copyfile src="tasks/all.rake" dest="tasks/all.rake" />
+	<copyfile src="tasks/couchdb.rake" dest="tasks/couchdb.rake" />
+	<copyfile src="tasks/distro.rake" dest="tasks/distro.rake" />
+	<copyfile src="tasks/distros.rb" dest="tasks/distros.rb" />
+	<copyfile src="tasks/environment.rake" dest="tasks/environment.rake" />
+	<copyfile src="tasks/erlang.rake" dest="tasks/erlang.rake" />
+	<copyfile src="tasks/export.rake" dest="tasks/export.rake" />
+	<copyfile src="tasks/icu.rake" dest="tasks/icu.rake" />
+	<copyfile src="tasks/lib.rb" dest="tasks/lib.rb" />
+	<copyfile src="tasks/shortcuts.rake" dest="tasks/shortcuts.rake" />
+	<copyfile src="tasks/toolchain.rake" dest="tasks/toolchain.rake" />
+	<copyfile src="tasks/tracemonkey.rake" dest="tasks/tracemonkey.rake" />
+	<copyfile src="templates/env.sh.erb" dest="templates/env.sh.erb" />
+  </project>
+
+  <project path="dependencies/couchdb" name="couchdb"
+           remote="apache" revision="trunk" />
+  <project path="dependencies/otp" name="otp"
+           remote="erlang" />
+  <project path="dependencies/js_src" name="spidermonkey"
+           revision="r37a3" />
+  <project path="dependencies/icu4c-4_4" name="icu4c"
+           revision="r44" />
+  <project path="dependencies/autoconf-2.13" name="autoconf"
+           remote="savannah" revision="74b21b9b2ce75529e3d93df7367f4f4b0c6b6adf" />
+  <project path="dependencies/autoconf-2.59" name="r/autoconf"
+           remote="savannahh" revision="99a48ad6c1e3f446717e1f8fec2fb1ae76b09f2e" />
+
+</manifest>
