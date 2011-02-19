@@ -16,7 +16,7 @@
   </project>
 
   <project path="dependencies/couchdb" name="couchdb"
-           remote="apache" revision="trunk" />
+           remote="apache" revision="1.0.x" />
   <project path="dependencies/otp" name="otp"
            remote="erlang" />
   <project path="dependencies/js_src" name="spidermonkey"
