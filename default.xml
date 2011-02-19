@@ -10,18 +10,25 @@
 
   <default revision="master" remote="membase" />
 
+  <!-- Build tools is master. -->
+
   <project path="build-tools" name="build-couchdb">
 	<copyfile src="README.md" dest="README.md" />
 	<copyfile src="Rakefile" dest="Rakefile" />
   </project>
 
+  <!-- This is tracking 1.0.x.  Could easily track trunk. -->
+
   <project path="dependencies/couchdb" name="couchdb"
            remote="apache" revision="1.0.x" />
-  <project path="dependencies/otp" name="otp"
-           remote="erlang" />
-  <project path="dependencies/js_src" name="spidermonkey"
-           revision="r37a3" />
-  <project path="dependencies/icu4c-4_4" name="icu4c"
-           revision="r44" />
 
+
+  <!-- These components are frozen solid for now. -->
+
+  <project name="icu4c" path="dependencies/icu4c-4_4"
+           revision="2ef73b7482a4a297e1e6a464f114dd65b0ee9610"/>
+  <project name="otp" path="dependencies/otp" remote="erlang"
+           revision="99e34bba1a60b262e24496cc9288b549360c6377"/>
+  <project name="spidermonkey" path="dependencies/js_src"
+           revision="a821f8a4287dcb36b8029c83fc47fa6f65035d60"/>
 </manifest>
