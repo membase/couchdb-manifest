@@ -17,11 +17,8 @@
 	<copyfile src="Rakefile" dest="Rakefile" />
   </project>
 
-  <!-- This is tracking 1.0.x.  Could easily track trunk. -->
-
   <project path="dependencies/couchdb" name="couchdb"
-           remote="apache" revision="1.0.x" />
-
+           remote="apache" revision="trunk" />
 
   <!-- These components are frozen solid for now. -->
 
