@@ -5,6 +5,10 @@
            fetch="git://github.com/membase/"
            review="review.membase.org" />
 
+  <remote  name="membase-private"
+           fetch="git@github.com:membase/"
+           review="review.membase.org" />
+
   <remote  name="apache" fetch="git://git.apache.org/" />
   <remote  name="erlang" fetch="git://github.com/erlang/" />
 
@@ -18,7 +22,7 @@
   </project>
 
   <project path="dependencies/couchdb" name="couchdb"
-           remote="apache" revision="trunk" />
+           remote="membase-private" />
 
   <!-- These components are frozen solid for now. -->
 
