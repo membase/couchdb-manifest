@@ -9,7 +9,7 @@
 
     $ mkdir couchdb
     $ cd couchdb
-    $ repo init -u git://github.com/membase/couchdb-manifest.git
+    $ repo init -u git@github.com:membase/couchdb-manifest.git
     $ repo sync
 
 ## Build
